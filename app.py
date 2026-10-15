@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 def fetch_product(barcode):
     base_url = f"https://world.openfoodfacts.org/api/v0/product/{barcode}.json"
-    headers = {"User-Agent": "AdminPortalInventory/1.0 (kipngeno@example.com)"}#for authorization to fetch from the api
+    headers = {"User-Agent": "AdminPortalInventory/1.0 (thuo@example.com)"}#for authorization to fetch from the api
     response = requests.get(base_url, headers=headers, timeout=5)#sets timeout 
     if response.status_code == 200:
         data = response.json()
